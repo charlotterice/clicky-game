@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
-import Card from "./components/Card";
-import Wrapper from "./components/Wrapper";
-import Header from "./componenets/Header";
-import cards from "./cards.json";
+import Card from "./Components/Card";
+import Wrapper from "./Components/Wrapper";
+import Header from "./Components/Header";
+import cards from "./Components/cards.json";
 import './App.css';
 
 class App extends Component {
   state = {
-    cards, score, highestscore
+    cards, score: 0, highestscore: 0
   };
 
 
@@ -31,7 +31,7 @@ class App extends Component {
   render() {
     return (
       <Wrapper>
-        <Header score={this.state.score} highscore={this.state.highscore}>Clicky Game</Header>
+        <Header score={this.state.score} highestscore={this.state.highestscore}>Clicky Game</Header>
         {this.state.cards.map(card => (
           <Card
             cardClickCount={this.cardClickCount}
@@ -45,7 +45,7 @@ class App extends Component {
   }
   gameOver = () => {
     if (this.state.score > this.state.highscore) {
-      this.setState({highscore: this.state.score}, function() {
+      this.setState({highestscore: this.state.score}, function() {
         console.log(this.state.highscore);
       });
     }
