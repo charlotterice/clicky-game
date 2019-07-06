@@ -3,7 +3,7 @@ import Card from "./Components/Card";
 import Wrapper from "./Components/Wrapper";
 import Header from "./Components/Header";
 import cards from "./Components/cards.json";
-import './App.css';
+
 
 class App extends Component {
   state = {
