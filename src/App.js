@@ -1,5 +1,8 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import Card from "./components/Card";
+import Wrapper from "./components/Wrapper";
+import Header from "./componenets/Header";
+import cards from "./cards.json";
 import './App.css';
 
 function App() {
